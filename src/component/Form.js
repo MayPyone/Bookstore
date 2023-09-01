@@ -6,6 +6,7 @@ export default function Form() {
       <span>Add new book</span>
       <div>
         <input placeholder="book title" />
+        <input placeholder="author" />
         <button type="button">ADD BOOK</button>
       </div>
     </form>
