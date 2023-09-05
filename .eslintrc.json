@@ -26,6 +26,7 @@
       ],
       "react/react-in-jsx-scope": "off",
       "import/no-unresolved": "off",
+      "linebreak-style": "off",
       "no-shadow": "off"
     },
     "overrides": [
