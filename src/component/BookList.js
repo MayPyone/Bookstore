@@ -1,10 +1,9 @@
 import Book from './Book';
 
-export default function BookList(prop) {
-  const { type, title, author } = prop;
+export default function BookList() {
   return (
     <ul>
-      <Book type={type} title={title} author={author} />
+      <Book />
     </ul>
   );
 }
