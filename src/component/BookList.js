@@ -3,12 +3,9 @@ import Book from './Book';
 
 export default function BookList() {
   const { totalbooks } = useSelector((state) => state.book);
-  const updateid = totalbooks.map((b) => ({
-    ...b,
-  }));
   return (
     <ul>
-      {updateid.map((item) => (
+      {totalbooks.map((item) => (
         <Book
           key={item.item_id}
           category={item.category}
