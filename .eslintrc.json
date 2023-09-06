@@ -15,6 +15,7 @@
     "extends": ["airbnb", "plugin:react/recommended", "plugin:react-hooks/recommended"],
     "plugins": ["react"],
     "rules": {
+      "camelcase": ["error", { "properties": "always", "ignoreDestructuring": true, "allow": ["item_id"] }],
       "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
       "import/no-extraneous-dependencies": [
         "error",

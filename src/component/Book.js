@@ -1,28 +1,20 @@
 import './styles/book.css';
-import { useSelector, useDispatch } from 'react-redux';
-
+import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/book/booksSlice';
 
-export default function Book() {
+export default function Book(prop) {
+  const {
+    category, title, author, item_id,
+  } = prop;
   const dispatch = useDispatch();
-  const { totalbooks } = useSelector((state) => state.book);
-  const updateid = totalbooks.map((b, index) => ({
-    ...b,
-    item_id: `item${index + 1}`,
-  }));
-
   return (
     <li className="list-item">
-      {
-        updateid.map((book) => (
-          <div key={book.item_id}>
-            <div>{book.category}</div>
-            <div>{book.title}</div>
-            <div>{book.author}</div>
-            <button type="button" onClick={() => { dispatch(removeBook(book.item_id)); }}>Remove</button>
-          </div>
-        ))
-      }
+      <div>
+        <div>{category}</div>
+        <div>{title}</div>
+        <div>{author}</div>
+        <button type="button" onClick={() => { dispatch(removeBook(item_id)); }}>Remove</button>
+      </div>
     </li>
   );
 }
