@@ -8,18 +8,15 @@ export default function BookList() {
   }));
   return (
     <ul>
-      {updateid.map((item) => {
-        console.log('This is book list');
-        return (
-          <Book
-            key={item.item_id}
-            category={item.category}
-            title={item.title}
-            author={item.author}
-            item_id={item.item_id}
-          />
-        );
-      })}
+      {updateid.map((item) => (
+        <Book
+          key={item.item_id}
+          category={item.category}
+          title={item.title}
+          author={item.author}
+          item_id={item.item_id}
+        />
+      ))}
     </ul>
   );
 }
