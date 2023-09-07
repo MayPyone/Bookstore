@@ -1,6 +1,6 @@
 import './styles/book.css';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/book/booksSlice';
+import { deleteUsers } from '../redux/book/booksSlice';
 
 export default function Book(prop) {
   const {
@@ -9,11 +9,11 @@ export default function Book(prop) {
   const dispatch = useDispatch();
   return (
     <li className="list-item">
-      <div>
+      <div key={item_id}>
         <div>{category}</div>
         <div>{title}</div>
         <div>{author}</div>
-        <button type="button" onClick={() => { dispatch(removeBook(item_id)); }}>Remove</button>
+        <button type="button" onClick={() => { dispatch(deleteUsers(item_id)); }}>Remove</button>
       </div>
     </li>
   );
