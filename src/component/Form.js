@@ -24,7 +24,6 @@ export default function Form() {
     };
     document.querySelector('.title').value = '';
     document.querySelector('.author').value = '';
-    dispatch(fetchBooks());
     return b;
   };
   return (
