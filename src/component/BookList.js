@@ -1,3 +1,4 @@
+import './styles/book.css';
 import { useSelector, useDispatch } from 'react-redux';
 import React, { useEffect } from 'react';
 import Book from './Book';
@@ -10,7 +11,7 @@ export default function BookList() {
     dispatch(fetchBooks());
   }, [dispatch]);
   return (
-    <ul>
+    <ul className="booklist">
 
       {totalbooks.map((item) => (
         <Book
