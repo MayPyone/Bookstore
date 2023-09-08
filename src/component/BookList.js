@@ -8,8 +8,7 @@ export default function BookList() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchBooks());
-  }, []);
-  console.log(`total boos at components${totalbooks}`);
+  }, [dispatch]);
   return (
     <ul>
 
