@@ -65,6 +65,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  margin-top: 0;
 }
 
 .total {
@@ -143,12 +144,11 @@
 }
 
 .progress-bar {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  border: 5px solid #307bbe;
-  border-left-color: #e8e8e8;
-  transform: rotate(45deg);
+  /* stylelint-disable-next-line csstree/validator */
+  background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(#307bbe 75%, #e8e8e8 0);
 }
 
 .third {
