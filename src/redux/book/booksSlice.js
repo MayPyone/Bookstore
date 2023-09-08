@@ -42,6 +42,18 @@ const bookSlice = createSlice({
         item_id,
         ...action.payload[item_id][0],
       }));
+
+      console.log(action.payload);
+      console.log('get data successfully');
+      console.log(action.payload);
+    });
+    builder.addCase(fetchBooks.rejected, () => {
+      console.log('can not get data');
+    });
+    builder.addCase(addBooks.fulfilled, (state, action) => {
+      state.totalbooks.push(action.payload);
+      console.log('Add a book successfully');
+      console.log(action.payload);
     });
   },
 });
