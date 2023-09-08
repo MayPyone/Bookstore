@@ -5,7 +5,7 @@ const initialState = {
   totalbooks: [],
 };
 
-export const fetchUsers = createAsyncThunk('user/fetchUsers', async () => {
+export const fetchBooks = createAsyncThunk('user/fetchUsers', async () => {
   try {
     const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/O92kginp6T1sTL75SMAS/books');
     return response.data;
@@ -14,7 +14,7 @@ export const fetchUsers = createAsyncThunk('user/fetchUsers', async () => {
   }
 });
 
-export const addUsers = createAsyncThunk('user/addUsers', async (data) => {
+export const addBooks = createAsyncThunk('user/addUsers', async (data) => {
   try {
     const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/O92kginp6T1sTL75SMAS/books',
       data);
@@ -24,7 +24,7 @@ export const addUsers = createAsyncThunk('user/addUsers', async (data) => {
   }
 });
 
-export const deleteUsers = createAsyncThunk('user/addUsers', async (id) => {
+export const deleteBooks = createAsyncThunk('user/addUsers', async (id) => {
   try {
     const response = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/O92kginp6T1sTL75SMAS/books/${id}`);
     return response.data;
@@ -36,13 +36,13 @@ export const deleteUsers = createAsyncThunk('user/addUsers', async (id) => {
 const bookSlice = createSlice({
   name: 'book',
   initialState,
-  reducers: {
-  },
   extraReducers: (builder) => {
-    builder.addCase(fetchUsers.fulfilled, (state, action) => {
-      state.totalbooks = action.payload;
+    builder.addCase(fetchBooks.fulfilled, (state, action) => {
+      state.totalbooks = Object.keys(action.payload).map((item_id) => ({
+        item_id,
+        ...action.payload[item_id][0],
+      }));
     });
   },
 });
-export const { addBook, removeBook } = bookSlice.actions;
 export default bookSlice.reducer;
