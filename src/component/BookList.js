@@ -22,7 +22,7 @@ export default function BookList() {
           item_id={item.item_id}
         />
       ))}
-
+      <div className="borders" />
     </ul>
   );
 }

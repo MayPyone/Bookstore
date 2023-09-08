@@ -19,14 +19,14 @@ export default function Form() {
       title: tit,
       author: auth,
       item_id: uuidv4(),
-      category: 'Fiction',
+      category: 'Economy',
     };
     return b;
   };
   return (
     <form>
-      <span>Add new book</span>
-      <div>
+      <span className="add">Add new book</span>
+      <div className="inputs">
         <input className="title" placeholder="book title" onChange={(e) => setTitle(e.target.value)} value={tit} required />
         <input className="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} value={auth} required />
         <button type="button" onClick={() => dispatch(addBooks(book()))}>ADD BOOK</button>
