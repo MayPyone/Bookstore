@@ -11,6 +11,7 @@
 .container {
   background-color: #fafafa;
   margin: 4%;
+  min-width: 87.5rem;
 }
 
 form {
