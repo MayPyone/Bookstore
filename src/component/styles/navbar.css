@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Montserrat-light';
-  src: url(fontfamily/Montserrat-Thin.ttf);
+  src: url(fontfamily/Montserrat-Light.ttf);
 }
 
 body {
@@ -38,9 +38,9 @@ h1 {
 a {
   text-decoration: none;
   font-size: 0.813rem;
-  color: #6e7173;
+  color: #8a898a;
   letter-spacing: 1.9px;
-  font-family: 'Montserrat-black', serif;
+  font-family: 'Montserrat-light', serif;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;

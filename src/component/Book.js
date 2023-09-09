@@ -40,7 +40,7 @@ export default function Book(prop) {
         <div className="vertical" />
         <div className="third">
           <div>
-            <p className="current-chapter">Current Chapter</p>
+            <p className="current-chapter">CURRENT CHAPTER</p>
             <p className="num-chapter">Chapter 17</p>
           </div>
           <button type="button" className="update">UPDATE PROGRESS</button>

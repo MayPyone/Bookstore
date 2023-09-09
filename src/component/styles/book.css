@@ -60,7 +60,7 @@
 }
 
 .category {
-  color: #6e7173;
+  color: #8a898a;
   font-family: 'Montserrat', serif;
   font-weight: bold;
   font-size: 0.875rem;
@@ -185,7 +185,7 @@
 }
 
 .num-chapter {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   font-family: "roboto-light", serif;
   color: rgb(18, 18, 18);
