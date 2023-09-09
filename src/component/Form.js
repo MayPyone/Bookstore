@@ -1,30 +1,35 @@
 import './styles/form.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { useState } from 'react';
-import { addBook } from '../redux/book/booksSlice';
+import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { addBooks, fetchBooks } from '../redux/book/booksSlice';
 
 export default function Form() {
   const [tit, setTitle] = useState('');
   const [auth, setAuthor] = useState('');
 
   const dispatch = useDispatch();
-  const { totalbooks } = useSelector((state) => state.book);
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
   const book = () => {
-    const i = totalbooks.length + 1;
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
     const b = {
       title: tit,
       author: auth,
-      item_id: `item${i}`,
+      item_id: uuidv4(),
+      category: 'Economy',
     };
     return b;
   };
   return (
     <form>
-      <span>Add new book</span>
-      <div>
-        <input className="title" placeholder="book title" onChange={(e) => setTitle(e.target.value)} value={tit} required />
-        <input className="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} value={auth} required />
-        <button type="button" onClick={() => dispatch(addBook(book()))}>ADD BOOK</button>
+      <span className="add">Add new book</span>
+      <div className="inputs">
+        <input className="title" placeholder="Book title" onChange={(e) => setTitle(e.target.value)} value={tit} required />
+        <input className="author" placeholder="Author" onChange={(e) => setAuthor(e.target.value)} value={auth} required />
+        <button type="button" onClick={() => dispatch(addBooks(book()))}>ADD BOOK</button>
       </div>
     </form>
   );

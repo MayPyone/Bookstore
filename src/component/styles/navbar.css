@@ -1,10 +1,69 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fontfamily/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-light';
+  src: url(fontfamily/Montserrat-Light.ttf);
+}
+
+body {
+  background-color: #e8e8e8;
+}
+
+nav {
+  background-color: yellow;
+}
+
 .navbar {
+  background-color: hsl(0, 0%, 100%);
+  padding: 0 6%;
   display: flex;
   align-items: center;
-  width: 40%;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-family: 'Montserrat', serif;
+  margin-bottom: 3%;
+}
+
+h1 {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: 'Montserrat', serif;
 }
 
 a {
   text-decoration: none;
+  font-size: 0.813rem;
+  color: #8a898a;
+  letter-spacing: 1.9px;
+  font-family: 'Montserrat-light', serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+a:active {
+  color: black;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+.user {
+  border-radius: 50%;
+  padding: 0.875rem;
+  border: 1px solid #e8e8e8;
+}
+
+.bookstore {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  justify-content: space-between;
 }

@@ -1,14 +1,19 @@
-import { useSelector } from 'react-redux';
+import './styles/book.css';
+import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
 import Book from './Book';
+import { fetchBooks } from '../redux/book/booksSlice';
 
 export default function BookList() {
   const { totalbooks } = useSelector((state) => state.book);
-  const updateid = totalbooks.map((b) => ({
-    ...b,
-  }));
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
   return (
-    <ul>
-      {updateid.map((item) => (
+    <ul className="booklist">
+
+      {totalbooks.map((item) => (
         <Book
           key={item.item_id}
           category={item.category}
@@ -17,6 +22,7 @@ export default function BookList() {
           item_id={item.item_id}
         />
       ))}
+      <div className="borders" />
     </ul>
   );
 }
