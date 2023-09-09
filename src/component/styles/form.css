@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat-light';
   src: url(fontfamily/Montserrat-Medium.ttf);
 }
 
@@ -8,11 +8,17 @@
   src: url(fontfamily/RobotoSlab-Bold.ttf);
 }
 
+.container {
+  min-width: 87.5rem;
+  background-color: #fafafa;
+  margin: 4%;
+}
+
 form {
   display: flex;
   flex-direction: column;
   padding: 0 6%;
-  margin-top: 1%;
+  margin-top: 2%;
   padding-bottom: 20rem;
 }
 
@@ -30,21 +36,33 @@ form {
   margin-bottom: 1%;
 }
 
+.title,
+.author {
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  font-family: 'Montserrat-light', sans-serif;
+}
+
 .title {
-  width: 48%;
+  width: 50%;
   margin-right: 3%;
-  padding: 0.5% 1%;
+  padding: 1% 1%;
+  border: 1px solid #e8e8e8;
 }
 
 .author {
-  width: 25%;
+  width: 26%;
   margin-right: 3%;
-  padding: 0.5% 1%;
+  padding: 1% 1%;
 }
 
 form button {
-  width: 11.5rem;
-  padding: 1% 1%;
+  width: 13rem;
+  padding: 1.6% 3%;
   background-color: #0290ff;
   border-radius: 3px;
   border: none;

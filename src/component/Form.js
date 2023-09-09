@@ -27,8 +27,8 @@ export default function Form() {
     <form>
       <span className="add">Add new book</span>
       <div className="inputs">
-        <input className="title" placeholder="book title" onChange={(e) => setTitle(e.target.value)} value={tit} required />
-        <input className="author" placeholder="author" onChange={(e) => setAuthor(e.target.value)} value={auth} required />
+        <input className="title" placeholder="Book title" onChange={(e) => setTitle(e.target.value)} value={tit} required />
+        <input className="author" placeholder="Author" onChange={(e) => setAuthor(e.target.value)} value={auth} required />
         <button type="button" onClick={() => dispatch(addBooks(book()))}>ADD BOOK</button>
       </div>
     </form>

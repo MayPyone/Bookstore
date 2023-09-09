@@ -21,7 +21,9 @@ export default function Book(prop) {
         </div>
         <div className="buttongroup">
           <button type="button">Comment</button>
+          <div className="borderline" />
           <button className="remove" type="button" onClick={() => dispatch(deleteBooks(item_id))}>Remove</button>
+          <div className="borderline" />
           <button type="button">Edit</button>
         </div>
       </div>

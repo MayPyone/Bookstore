@@ -3,8 +3,12 @@
   src: url(fontfamily/Montserrat-Medium.ttf);
 }
 
+@font-face {
+  font-family: 'Montserrat-light';
+  src: url(fontfamily/Montserrat-Thin.ttf);
+}
+
 body {
-  max-width: 87.5em;
   background-color: #e8e8e8;
 }
 
@@ -36,6 +40,10 @@ a {
   font-size: 0.813rem;
   color: #6e7173;
   letter-spacing: 1.9px;
+  font-family: 'Montserrat-black', serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
 }
 
 a:active {
@@ -53,14 +61,9 @@ a:hover {
   border: 1px solid #e8e8e8;
 }
 
-.bi {
-  background-color: red;
-  fill: black;
-}
-
 .bookstore {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 45%;
   justify-content: space-between;
 }

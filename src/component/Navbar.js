@@ -10,8 +10,8 @@ export default function Navbar() {
       <div className="navbar">
         <div className="bookstore">
           <h1>Bookstore CMS</h1>
-          <NavLink to="/">Book</NavLink>
-          <NavLink to="categories">Categories</NavLink>
+          <NavLink to="/">BOOKS</NavLink>
+          <NavLink to="categories">CATEGORIES</NavLink>
         </div>
         <div className="user">
           <FaUser size={21} color="#0290ff" />
