@@ -9,7 +9,6 @@
 }
 
 .container {
-  min-width: 87.5rem;
   background-color: #fafafa;
   margin: 4%;
 }
@@ -55,13 +54,13 @@ form {
 }
 
 .author {
-  width: 26%;
+  width: 27%;
   margin-right: 3%;
   padding: 1% 1%;
 }
 
 form button {
-  width: 13rem;
+  width: 11rem;
   padding: 1.6% 3%;
   background-color: #0290ff;
   border-radius: 3px;
